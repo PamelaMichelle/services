@@ -26,7 +26,7 @@ import {
     constructor(private productsService: ProductsService) {}
   
     @ApiOperation({ summary: 'Create One' })
-    //@Auth()
+    @Auth()
     @Post()
     @HttpCode(HttpStatus.CREATED)
     async create(@Body() payload: CreateProductDto): Promise<ResponseHttpModel> {
@@ -70,7 +70,7 @@ import {
     }
   
     @ApiOperation({ summary: 'Find One' })
-    //@Auth()
+    @Auth()
     @Get(':id')
     @HttpCode(HttpStatus.OK)
     async findOne(
@@ -86,7 +86,7 @@ import {
     }
   
     @ApiOperation({ summary: 'Update One' })
-   // @Auth()
+    @Auth()
     @Put(':id')
     @HttpCode(HttpStatus.CREATED)
     async update(
@@ -103,7 +103,7 @@ import {
     }
   
     @ApiOperation({ summary: 'Remove One' })
-    //@Auth()
+    @Auth()
     @Delete(':id')
     @HttpCode(HttpStatus.CREATED)
     async remove(
@@ -119,7 +119,7 @@ import {
     }
   
     @ApiOperation({ summary: 'Remove All' })
-    //@Auth()
+    @Auth()
     @Patch('remove-all')
     @HttpCode(HttpStatus.CREATED)
     async removeAll(@Body() payload: ProductEntity[]): Promise<ResponseHttpModel> {

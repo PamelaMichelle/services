@@ -58,7 +58,4 @@ import {
     @IsString(isNumberValidationOptions())
     readonly categpryId: number;
 
-
-
-
   }
