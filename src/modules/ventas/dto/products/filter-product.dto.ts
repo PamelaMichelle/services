@@ -5,10 +5,8 @@ import {
     isNotEmptyValidationOptions,
     isNumberValidationOptions,
     isStringValidationOptions,
-    IsArrayValidationOptions,
-    isPositiveValidationOptions,
-    IsIntValidationOptions
-  } from '@shared/validation';
+ 
+  } from 'src/shared/validation/validations-message';
 
 import { title } from 'process';
 
@@ -31,6 +29,7 @@ readonly categoryId:number;
 @IsString({message:'el campo nomnbre debe ser string'})
     limit: number;
     page: number;
+    search:string;
 
 
 }

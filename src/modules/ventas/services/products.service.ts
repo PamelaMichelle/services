@@ -4,9 +4,14 @@ import { FindOptionsWhere, ILike, Repository } from 'typeorm';
 //import { ServiceResponseHttpModel } from '@shared/models';
 import { plainToInstance } from 'class-transformer';
 import { response } from 'express';
-import { CreateProductDto, ReadProductDto, FilterProductDto, UpdateProductDto } from '../../dto';
-import { ProductEntity } from '../../entities/product.model';
-import { PaginationDto } from '../../dto/pagination/pagination.dto';
+import { PaginationDto } from '../dto/pagination/pagination.dto';
+import { ProductEntity } from '../entities/product.model';
+import { CreateProductDto } from '../dto/products/create-product.dto';
+import { ReadProductDto } from '../dto/products/read-product.dto';
+import { FilterProductDto } from '../dto/products/filter-product.dto';
+import { UpdateProductDto } from '../dto/products/update-product.dto';
+import { ServiceResponseHttpModel } from 'src/shared/models/service-response-http.model';
+
 
 @Injectable()
 export class ProductsService {
